@@ -4,9 +4,16 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: MavenPro-Regular;
+  /* Имя шрифта */
+  src: url(./assets/fonts/MavenPro-Regular.ttf);
+  /* Путь к файлу со шрифтом */
+}
+
 body {
   background-color: #ffffff;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato', 'MavenPro-Regular', sans-serif;
 }
 
 .wrapper {
@@ -102,7 +109,8 @@ header:after {
   left: 110px;
 }
 
-.row-first::before, .row-third::before {
+.row-first::before,
+.row-third::before {
   position: absolute;
   content: "";
   left: -11px;
@@ -113,7 +121,8 @@ header:after {
   border-width: 0 0 0 1px;
 }
 
-.row-first::after, .row-third::after {
+.row-first::after,
+.row-third::after {
   position: absolute;
   content: "";
   right: 209px;
@@ -216,20 +225,76 @@ header:after {
 
 
 .info {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding-top: 67px;
+  padding-top: 61px;
   padding-bottom: 67px;
   background: #2eb398;
+}
+
+.info-wrapper {
+  position: relative;
+  width: 820px;
+  display: flex;
+  margin: 0 auto;
+}
+
+.info-wrapper:before {
+  position: absolute;
+  content: "";
+  right: -1px;
+  height: 316px;
+  bottom: -55px;
+  opacity: 0.1;
+  border: 1px solid black;
+  border-width: 0 0 0 1px;
+}
+
+.info-wrapper:after {
+  position: absolute;
+  content: "";
+  left: -1px;
+  height: 316px;
+  bottom: -55px;
+  opacity: 0.1;
+  border: 1px solid black;
+  border-width: 0 0 0 1px;
+}
+.hexagon-photo-artist {
+  position: relative;
+  left: 10px;
+  top: 9px;
 }
 
 .photo-artist {
   background: url("./assets/ArtistPhoto.png") no-repeat 50%;
 }
 
-.text-info {
-  width: 60%;
+.info-aside {
+  width: 581px;
+  margin-left: 21px;
+}
+
+.main-title {
+  font-size: 30px;
+  color: rgba(215, 252, 245, 255);
+}
+
+.title {
+  font-family: MavenPro-Regular, sans-serif;
+  font-weight: 300;
+}
+
+.info-subtitle{
+  font-size: 18px;
+  color: rgba(32, 129, 109, 255);
+  margin-bottom: 14px;
+}
+
+.info-text {
+  font-size: 12px;
+  line-height: 1.8;
+  text-align: justify;
+  margin-bottom: 36px;
+  color: rgba(215, 252, 245, 255);
 }
 
 .socials {
