@@ -258,6 +258,7 @@ header:after {
   border: 1px solid black;
   border-width: 0 0 0 1px;
 }
+
 .hexagon-photo-artist {
   position: relative;
   left: 10px;
@@ -283,7 +284,7 @@ header:after {
   font-weight: 300;
 }
 
-.info-subtitle{
+.info-subtitle {
   font-size: 18px;
   color: rgba(32, 129, 109, 255);
   margin-bottom: 14px;
@@ -309,9 +310,10 @@ header:after {
 
 .facebook-link {
   display: inline-block;
-  width: 24px;
+  width: 25px;
   height: 24px;
   background: url(./assets/Facebook@1X.png);
+  /* background: url(./assets/facebook-f-brands.svg); */
   background-size: cover;
 }
 
@@ -319,13 +321,13 @@ header:after {
   display: inline-block;
   width: 24px;
   height: 24px;
-  background: url(./assets/Twitter@1X.png);
+  background: #a5dbd4 url(./assets/Twitter@1X.png);
   background-size: cover;
 }
 
 .google-link {
   display: inline-block;
-  width: 24px;
+  width: 25px;
   height: 24px;
   background: url(./assets/Google@1X.png);
   background-size: cover;
@@ -341,7 +343,7 @@ header:after {
 
 .linkedin-link {
   display: inline-block;
-  width: 24px;
+  width: 25px;
   height: 24px;
   background: url(./assets/Linkedin@1X.png);
   background-size: cover;
@@ -360,23 +362,44 @@ header:after {
 }
 
 .footer-wrapper {
+  position: relative;
   width: 800px;
   margin: 0 auto;
-  padding: 59px 0;
+  padding: 59px 0 63px;
   color: rgba(224, 224, 224, 255);
+}
+
+.footer-wrapper:before {
+  position: absolute;
+  content: "";
+  left: -80px;
+  top: 10px;
+  width: 960px;
+  top: 13px;
+  border: 1px solid #2b2b2b;
+  border-width: 1px 0 0 0;
+}
+
+.footer-wrapper:after {
+  position: absolute;
+  content: "";
+  left: -80px;
+  bottom: 10px;
+  width: 960px;
+  border: 1px solid #2b2b2b;
+  border-width: 1px 0 0 0;
 }
 
 .get-in-touch-header {
   padding: 0 10px;
+  margin-bottom: 20px;
 }
 
 .get-in-touch-title {
-  font-family: 'Maven Pro', sans-serif;
   font-size: 30px;
 }
 
 .get-in-touch-text {
-  font-family: 'Maven Pro', sans-serif;
   font-size: 18px;
   color: rgba(190, 190, 190, 255);
 }
@@ -387,37 +410,65 @@ header:after {
   flex-direction: column;
 }
 
-
 .form-wrapper {
   display: flex;
   justify-content: space-between;
-  padding: 20px 10px;
+  padding: 0 10px;
 }
 
-.form-wrapper-info {
+.footer-aside {
   width: 180px;
   text-align: justify;
 }
 
-.input-text {
+.form-field {
   height: 38px;
   margin-bottom: 16px;
+  padding-left: 14px;
+  padding-bottom: 4px;
+  background: #454545;
+  border: none;
 }
 
-.input-email {
-  height: 38px;
-  margin-bottom: 16px;
+.form-field::placeholder,
+.form-textarea::placeholder {
+  font-family: 'Lato', 'MavenPro-Regular', sans-serif;
+  font-size: 12px;
+  color: rgba(190, 190, 190, 255);
 }
 
-.input-textarea {
+.form-textarea {
   height: 150px;
   margin-bottom: 16px;
+  padding-left: 14px;
+  padding-top: 9px;
+  background: #454545;
+  border: none;
+  resize: vertical;
 }
 
-.form-info-text {
-  list-style: none;
+.submit-button {
+  width: 90px;
+  height: 37px;
+  text-align: center;
+  align-self: flex-end;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+  color: rgba(215, 252, 245, 255);
+  background-color: #2eb398;
+  border: none;
+}
+
+.footer-text {
   font-size: 12px;
   color: rgba(224, 224, 224, 255);
+  line-height: 1.8;
+  margin-bottom: 33px;
+}
+
+.footer-text-heading {
+  font-weight: 900;
 }
 
 .contacts-list {
@@ -425,4 +476,36 @@ header:after {
   font-weight: 700;
   font-size: 12px;
   color: rgba(190, 190, 190, 255);
+}
+
+.contacts-item {
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+}
+
+.footer-icon {
+  width: 13px;
+  height: 13px;
+  margin-right: 10px;
+  object-fit: scale-down;
+}
+
+.contacts-link {
+  text-decoration: none;
+  font-size: 12px;
+  color: rgba(190, 190, 190, 255);
+}
+
+.copyright-wrapper {
+  background: #222222;
+  height: 43px;
+  display: flex;
+  align-items: center;
+}
+
+.copyright {
+  font-size: 12px;
+  color: rgba(69, 69, 69, 255);
+  padding-left: 40px;
 }
