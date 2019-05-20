@@ -56,7 +56,11 @@ header:after {
   color: #f5f5f5;
   text-decoration: none;
   text-transform: uppercase;
+}
 
+.nav-link:hover {
+  color: #2eb398;
+  transition: 0.5s ease;
 }
 
 .logo {
@@ -66,6 +70,11 @@ header:after {
   background: url(./assets/Logo1.png);
   background-size: cover;
   text-indent: -9999px;
+}
+
+.logo:hover {
+  transform: translateY(1px);
+  transition: 0.5s ease;
 }
 
 .nav-item {
@@ -153,6 +162,11 @@ header:after {
   overflow: hidden;
   visibility: hidden;
   display: inline-block;
+}
+
+.hexagon:hover {
+  transform: scale(1.05) rotate(120deg);
+  transition: 0.5s ease;
 }
 
 .hex-layer-1 {
@@ -308,12 +322,17 @@ header:after {
   display: inline-block;
 }
 
+.socials-item:hover {
+  transform: scale(1.1);
+  transition: 0.5s ease;
+
+}
+
 .facebook-link {
   display: inline-block;
   width: 25px;
   height: 24px;
   background: url(./assets/Facebook@1X.png);
-  /* background: url(./assets/facebook-f-brands.svg); */
   background-size: cover;
 }
 
@@ -458,6 +477,12 @@ header:after {
   color: rgba(215, 252, 245, 255);
   background-color: #2eb398;
   border: none;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #1e8a74;
+  transition: 0.5s ease;
 }
 
 .footer-text {
